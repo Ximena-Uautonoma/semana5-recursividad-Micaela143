@@ -22,10 +22,12 @@ def contar_recursivo(n):
     lista = []
     if n == 1:
         lista.append(1)
-        return lista
     else:
-        lista.append(contar_recursivo(n-1))
-        return lista
+        lista.append(n)
+        num = contar_recursivo(n-1)
+        lista.append(num)
+        
+    return lista
 
 x = int(input("ingrese un numero: "))
 print(contar_ciclo(x))
